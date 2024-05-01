@@ -1,0 +1,32 @@
+{
+  "pairs": [
+    "BINANCE:btcusdt",
+    "OKEX:BTC-USDT",
+    "BITMEX:XBTUSD",
+    "OKEX:BTC-USD-SWAP",
+    "OKEX:BTC-USDT-SWAP",
+    "BINANCE_FUTURES:btcusdt",
+    "BINANCE_FUTURES:btcusd_perp",
+    "BYBIT:BTCUSD",
+    "BYBIT:BTCUSDT"
+  ],
+  "collect": true,
+  "api": true,
+  "storage": [
+    "influx"
+  ],
+  "backupInterval": 5000,
+  "influxDatabase": "significant_trades",
+  "influxMeasurement": "trades",
+  "influxTimeframe": 1000,
+  "influxResampleTo": [
+    15000,
+    30000,
+    60000
+  ],
+  "influxResampleInterval": 60000,
+  "influxRetentionPerTimeframe": 17280000,
+  "influxRetentionPrefix": "aggr_",
+  "enableRateLimit": false,
+  "debug": false
+}
